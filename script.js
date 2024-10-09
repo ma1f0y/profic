@@ -15,20 +15,5 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 
 // send msg to slack
 
-token = atob("eG94Yi03ODM0MjYyNTYwMDgyLTc4MzQyMDQ5NjYzNTUtWGwzOWEyOFRGUmtWaDhXYnZJRnhQR1FL")
 
-const sendMsg = (msg, channel) => {
-    fetch(`https://slack.com/api/chat.postMessage`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            channel: channel,
-            text: msg
-        })
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error))
-}
+
